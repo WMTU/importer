@@ -1,0 +1,9 @@
+= form_tag sessions_path, id: 'login-form' do
+  .center
+    = text_field_tag :username, params[:username], id: 'username', placeholder: 'username'
+  br
+  .center
+    = password_field_tag :password, params[:password], id: 'password', placeholder: 'password'
+  br
+  .center
+    = submit_tag 'Log In'

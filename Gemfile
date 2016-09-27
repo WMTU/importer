@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'ladle', '~> 1.0', '>= 1.0.1'
 end
 
 group :development do
@@ -50,3 +52,9 @@ gem 'bindata', '~> 2.3', '>= 2.3.3'
 
 # Netldap for ldap server auth
 gem 'net-ldap', '~> 0.15.0'
+
+# annotate model files with db schema
+gem 'annotate', '~> 2.7', '>= 2.7.1'
+
+# slim templates
+gem 'slim', '~> 3.0', '>= 3.0.7'

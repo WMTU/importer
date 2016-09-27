@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: tokens
+#
+#  id         :integer          not null, primary key
+#  key        :text
+#  user_id    :integer
+#  expires_at :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key: MyText
+  user_id: 
+  expires_at: 2016-09-26 20:57:39
+
+two:
+  key: MyText
+  user_id: 
+  expires_at: 2016-09-26 20:57:39

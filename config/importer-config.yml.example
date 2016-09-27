@@ -1,0 +1,17 @@
+default: &default
+  token_expiry: 1.week
+  ldap:
+    host:
+    port:
+    ssl:
+    attribute:
+    base_dn:
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
