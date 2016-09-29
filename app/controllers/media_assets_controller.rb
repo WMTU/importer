@@ -27,7 +27,7 @@ class MediaAssetsController < ApplicationController
     @media_asset = MediaAsset.new(audio_file: params[:file])
 
     if @media_asset.save
-			respond_to do |format|
+      respond_to do |format|
         format.json { render json: @media_asset }
       end
     end

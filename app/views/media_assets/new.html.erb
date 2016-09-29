@@ -2,9 +2,9 @@
 
 <%= form_tag '/media_assets', method: :post, class: "dropzone", id: "media-dropzone" do %>
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-	<div class="fallback">
-		<%= file_field_tag "media_asset", multiple: true%>
-	</div>
+  <div class="fallback">
+    <%= file_field_tag "media_asset", multiple: true%>
+  </div>
 <% end %>
 
 <%= link_to 'Back', media_assets_path %>

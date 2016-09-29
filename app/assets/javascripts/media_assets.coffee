@@ -4,5 +4,5 @@
 
 mediaDropzone = new Dropzone('#media-dropzone')
 mediaDropzone.on 'success', (file, responseText) ->
-	imageUrl = responseText.file_name.url
-	return
+  imageUrl = responseText.file_name.url
+  return
