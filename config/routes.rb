@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  resources :media_assets
+  root to: 'media_assets#new'
 
   resource :sessions, only: [:new, :create, :destroy]
 end

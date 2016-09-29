@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927042828) do
+ActiveRecord::Schema.define(version: 20160929032918) do
+
+  create_table "media_assets", force: :cascade do |t|
+    t.string   "title"
+    t.string   "artist"
+    t.string   "album"
+    t.string   "year"
+    t.integer  "channels"
+    t.integer  "sample_rate"
+    t.decimal  "cue",         precision: 16, scale: 3
+    t.decimal  "intro",       precision: 16, scale: 3
+    t.decimal  "eom",         precision: 16, scale: 3
+    t.string   "audio_file"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
 
   create_table "tokens", force: :cascade do |t|
     t.text     "key"

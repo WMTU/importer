@@ -58,3 +58,7 @@ gem 'annotate', '~> 2.7', '>= 2.7.1'
 
 # slim templates
 gem 'slim', '~> 3.0', '>= 3.0.7'
+
+# dropzonejs and carrierwave for file uploads
+gem 'dropzonejs-rails'
+gem 'carrierwave'

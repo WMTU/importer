@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Media Assets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>Channels</th>
+      <th>Sample rate</th>
+      <th>Cue</th>
+      <th>Intro</th>
+      <th>Eom</th>
+      <th>Audio file</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @media_assets.each do |media_asset| %>
+      <tr>
+        <td><%= media_asset.title %></td>
+        <td><%= media_asset.artist %></td>
+        <td><%= media_asset.album %></td>
+        <td><%= media_asset.year %></td>
+        <td><%= media_asset.channels %></td>
+        <td><%= media_asset.sample_rate %></td>
+        <td><%= media_asset.cue %></td>
+        <td><%= media_asset.intro %></td>
+        <td><%= media_asset.eom %></td>
+        <td><%= media_asset.audio_file %></td>
+        <td><%= link_to 'Show', media_asset %></td>
+        <td><%= link_to 'Edit', edit_media_asset_path(media_asset) %></td>
+        <td><%= link_to 'Destroy', media_asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Media asset', new_media_asset_path %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @media_asset.title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @media_asset.artist %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @media_asset.album %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @media_asset.year %>
+</p>
+
+<p>
+  <strong>Channels:</strong>
+  <%= @media_asset.channels %>
+</p>
+
+<p>
+  <strong>Sample rate:</strong>
+  <%= @media_asset.sample_rate %>
+</p>
+
+<p>
+  <strong>Cue:</strong>
+  <%= @media_asset.cue %>
+</p>
+
+<p>
+  <strong>Intro:</strong>
+  <%= @media_asset.intro %>
+</p>
+
+<p>
+  <strong>Eom:</strong>
+  <%= @media_asset.eom %>
+</p>
+
+<p>
+  <strong>Audio file:</strong>
+  <%= @media_asset.audio_file %>
+</p>
+
+<%= link_to 'Edit', edit_media_asset_path(@media_asset) %> |
+<%= link_to 'Back', media_assets_path %>

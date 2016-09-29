@@ -1,0 +1,2 @@
+module MediaAssetsHelper
+end

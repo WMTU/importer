@@ -16,4 +16,7 @@
 !/log/.keep
 /tmp
 
+# Ignore all uploads
+/public/uploads/*
+
 /config/importer-config.yml
