@@ -3,9 +3,10 @@ html
   head
     = render 'shared/head'
   body
-    header
-      h2 Importer
-      = render 'shared/flashes'
-      
-    main
-      = yield
+    .container
+      header
+        h4 Importer
+        = render 'shared/flashes'
+
+      main
+        = yield

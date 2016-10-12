@@ -62,3 +62,9 @@ gem 'slim', '~> 3.0', '>= 3.0.7'
 # dropzonejs and carrierwave for file uploads
 gem 'dropzonejs-rails'
 gem 'carrierwave'
+
+# best_in_place for in-place attribute editing
+gem 'best_in_place', '~> 3.0.1'
+
+# use skeleton for styling
+gem 'skeleton-rails'

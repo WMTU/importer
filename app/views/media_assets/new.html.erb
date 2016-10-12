@@ -1,9 +1,14 @@
-<h1>New Media Assets</h1>
+<h1>Upload Audio Files</h1>
 
-<%= form_tag '/media_assets', method: :post, class: "dropzone", id: "media-dropzone" do %>
-  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-  <div class="fallback">
-    <%= file_field_tag "media_asset", multiple: true%>
+<%= form_for @media_asset, url: {action: 'create'}, html: {class: 'dropzone', id: 'media-dropzone'} do |f| %>
+  <div class="fallback row">
+    <div class="twelve columns">
+      <%= f.label :audio_file %>
+      <%= f.file_field :audio_file %>
+    </div>
+    <div class="twelve columns">
+      <%= f.submit "Upload", class: 'button-primary' %>
+    </div>
   </div>
 <% end %>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929032918) do
+ActiveRecord::Schema.define(version: 20161012035707) do
 
   create_table "media_assets", force: :cascade do |t|
     t.string   "title"
@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(version: 20160929032918) do
     t.string   "year"
     t.integer  "channels"
     t.integer  "sample_rate"
-    t.decimal  "cue",         precision: 16, scale: 3
-    t.decimal  "intro",       precision: 16, scale: 3
-    t.decimal  "eom",         precision: 16, scale: 3
+    t.string   "cue",         limit: 12, default: "00:00:00.000"
+    t.string   "intro",       limit: 12, default: "00:00:00.000"
+    t.string   "eom",         limit: 12
     t.string   "audio_file"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
   create_table "tokens", force: :cascade do |t|

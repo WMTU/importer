@@ -4,7 +4,15 @@ class MediaAssetsController < ApplicationController
   # GET /media_assets
   # GET /media_assets.json
   def index
-    @media_assets = MediaAsset.all
+    @artists = Hash.new
+    MediaAsset.select(:artist).distinct.each do |artist|
+      @artists[artist.artist] = Hash.new
+      MediaAsset.select(:album).distinct.where(artist: artist.artist).each do |album|
+        @artists[artist.artist][album.album] = MediaAsset.where(artist: artist.artist).where(album: album.album).all
+      end
+    end
+
+    #@media_assets = MediaAsset.all
   end
 
   # GET /media_assets/1
@@ -24,10 +32,11 @@ class MediaAssetsController < ApplicationController
   # POST /media_assets
   # POST /media_assets.json
   def create
-    @media_asset = MediaAsset.new(audio_file: params[:file])
+    @media_asset = MediaAsset.new media_asset_params
 
     if @media_asset.save
       respond_to do |format|
+        format.html { redirect_to(url_for(action: 'index')) }
         format.json { render json: @media_asset }
       end
     end
@@ -39,7 +48,7 @@ class MediaAssetsController < ApplicationController
     respond_to do |format|
       if @media_asset.update(media_asset_params)
         format.html { redirect_to @media_asset, notice: 'Media asset was successfully updated.' }
-        format.json { render :show, status: :ok, location: @media_asset }
+        format.json { render json: @media_asset }
       else
         format.html { render :edit }
         format.json { render json: @media_asset.errors, status: :unprocessable_entity }

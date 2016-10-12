@@ -1,3 +1,19 @@
 // Place all the styles related to the media_assets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.song {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  span {
+    line-height: 3em;
+  }
+
+  span input {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
